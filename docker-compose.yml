@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  mqtt2exist:
+    build: .
+    container_name: mqtt2exist
+    env_file:
+      - .env
+    # Use host network so MQTT_HOST=localhost can hit your host's MQTT broker
+    network_mode: host
+    restart: unless-stopped
+    # Optional: always run with unbuffered output for realtime logs
+    command: ["python", "-u", "mqtt2exist.py"]
