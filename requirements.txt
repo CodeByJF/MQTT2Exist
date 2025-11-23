@@ -1,0 +1,4 @@
+requests
+python-dotenv
+paho-mqtt
+backports.zoneinfo; python_version < "3.9"
