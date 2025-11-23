@@ -4,8 +4,6 @@ services:
   mqtt2exist:
     build: .
     container_name: mqtt2exist
-    env_file:
-      - .env
     # Use host network so MQTT_HOST=localhost can hit your host's MQTT broker
     network_mode: host
     restart: unless-stopped
